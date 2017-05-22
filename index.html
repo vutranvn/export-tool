@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AppTool</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="/libs/webix.css" type="text/css" media="screen" charset="utf-8">
+
+   	<script src="/libs/webix.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/common/testdata.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">
+       	webix.ui({
+            type:"clean", rows:[
+                { height:10 },
+                {view:"tabbar", multiview:true, options:[
+                    {id:"buttons", value:"Buttons"},
+                    {id:"inputs", value:"Inputs"},
+                    {id:"choice", value:"Select Inputs"},
+                    {id:"helpers", value:"Helper Controls"}
+                ]
+                },
+                { width:500, cells: [
+                    {id:"buttons", view:"form", elements: buttons},
+                    {id:"inputs", view:"form", elements: inputs},
+                    {id:"choice", view:"form", elements: choice},
+                    {id:"helpers", rows: helpers}
+                ]
+                }
+            ]
+           }).show();
+
+       	</script>
+</body>
+</html>
